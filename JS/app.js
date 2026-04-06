@@ -776,7 +776,7 @@ function initQRCode() {
         return;
     }
 
-    const portfolioUrl = 'https://fawa12748.github.io/Mon_portfolio/';
+    const portfolioUrl = ' https://fawa12748.github.io/awa-faye-portfolio/';
     
     const existingModal = document.getElementById('qr-modal-full');
     if (existingModal) existingModal.remove();
