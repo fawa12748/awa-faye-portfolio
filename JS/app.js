@@ -45,43 +45,45 @@ const PROJETS = [
 ];
 
 // ===== DONNÉES COMPÉTENCES =====
+// Dans app.js, remplacez la constante "competences" par :
+
 const competences = [
     {
         categorie: "🗺️ SIG & Cartographie",
         description: "Maîtrise des outils de Systèmes d'Information Géographique pour la création de cartes thématiques et l'analyse spatiale.",
         skills: [
-            { nom: "QGIS", pct: 85, niveau: "Avancé", levelClass: "level-advanced", desc: "Cartographie thématique, numérisation, analyses spatiales" },
-            { nom: "ArcGIS", pct: 55, niveau: "Intermédiaire", levelClass: "level-intermediate", desc: "Notions de base numérisation, et analyses simples" },
-            { nom: "Télédétection", pct: 60, niveau: "Intermédiaire", levelClass: "level-intermediate", desc: "Analyse d'images satellitaires" }
+            { nom: "QGIS", pct: 95, niveau: "Avancé", desc: "Cartographie thématique avancée, géoréférencement, numérisation de données vectorielles, analyses spatiales, création de mise en page et impression de cartes professionnelles" },
+            { nom: "ArcGIS", pct: 85, niveau: "Avancé", desc: "numérisation, analyses spatiales, création de cartes et utilisation de ArcCatalog pour la gestion des données" },
+            { nom: "Télédétection", pct: 65, niveau: "Intermédiaire", desc: "Analyse d'images satellitaires (Landsat, Sentinel), calcul d'indices spectraux (NDVI, NDWI), classification non supervisée et détection des changements" }
         ]
     },
     {
         categorie: "💻 Développement Web",
         description: "Création d'interfaces web modernes et d'applications cartographiques interactives accessibles à tous.",
         skills: [
-            { nom: "HTML & CSS", pct: 90, niveau: "Avancé", levelClass: "level-advanced", desc: "Intégration, responsive design, animations" },
-            { nom: "JavaScript", pct: 75, niveau: "Intermédiaire", levelClass: "level-intermediate", desc: "Interactivité, DOM, API, modules ES6+" },
-            { nom: "Git & GitHub", pct: 45, niveau: "Débutant", levelClass: "level-beginner", desc: "Versionnage et collaboration" }
+            { nom: "HTML & CSS", pct: 80, niveau: "Avancé", desc: "Intégration, responsive design (mobile-first), animations CSS, variables CSS pour les animations" },
+            { nom: "JavaScript", pct: 70, niveau: "Intermédiaire", desc: "Manipulation du DOM, événements, création de modales, animations et interactions utilisateur" },
+            { nom: "Git & GitHub", pct: 45, niveau: "Débutant", desc: "Versionnage de code avec Git, création de dépôts sur GitHub, commits, push/pull, gestion de branches et déploiement de sites sur GitHub Pages." }
         ]
     },
     {
         categorie: "📊 Analyse de données",
         description: "Traitement statistique et analyse de données géographiques pour en extraire des informations pertinentes.",
         skills: [
-            { nom: "RStudio", pct: 75, niveau: "Intermédiaire", levelClass: "level-intermediate", desc: "Statistiques spatiales, visualisation de données" },
-            { nom: "Python", pct: 50, niveau: "Débutant", levelClass: "level-beginner", desc: "Manipulation de données géospatiales" },
-            { nom: "Excel / Tableur", pct: 80, niveau: "Avancé", levelClass: "level-advanced", desc: "Analyse statistique, tableaux croisés" },
-            { nom: "MySQL", pct: 55, niveau: "Intermédiaire", levelClass: "level-intermediate", desc: "Requêtes spatiales, Bases de données spatiales" }
+            { nom: "RStudio", pct: 95, niveau: "Avancé", desc: "Statistiques spatiales, visualisation de données, analyses multivariées, régressions spatiales et création de rapports dynamiques avec R Markdown" },
+            { nom: "Python", pct: 80, niveau: "Avancé", desc: "Découverte de Python pour l'analyse de données. Apprentissage des bases : variables, boucles, fonctions" },
+            { nom: "Excel / Tableur", pct: 80, niveau: "Avancé", desc: "Analyse statistique descriptive, tableaux croisés dynamiques, création de graphiques cartographiques, traitement et nettoyage de données pour la géomatique" },
+            { nom: "MySQL", pct: 65, niveau: "Intermédiaire", desc: "Requêtes SQL, gestion de bases de données , création et manipulation de tables et jointures" }
         ]
     },
     {
         categorie: "🎨 Outils & Méthodes",
         description: "Utilisation d'outils complémentaires pour la production de documents professionnels et la gestion de projets.",
         skills: [
-            { nom: "Design cartographique", pct: 85, niveau: "Avancé", levelClass: "level-advanced", desc: "Visualisation et communication" },
-            { nom: "Méthodologie projet", pct: 75, niveau: "Avancé", levelClass: "level-advanced", desc: "Planification et gestion" },
-            { nom: "KoboToolBox", pct: 80, niveau: "Avancé", levelClass: "level-advanced", desc: "Création de formulaires, collecte de données terrain" },
-            { nom: "PowerPoint", pct: 95, niveau: "Avancé", levelClass: "level-advanced", desc: "Présentations, rapports cartographiques" }
+            { nom: "Design cartographique", pct: 60, niveau: "Intermédiaire", desc: "Conception de cartes esthétiques et fonctionnelles, choix des couleurs et symboles, hiérarchisation de l'information, création de légendes et d'habillages cartographiques" },
+            { nom: "Méthodologie projet", pct: 75, niveau: "Avancé", desc: "Planification de projet, gestion des tâches, respect des délais, travail en équipe, rédaction de rapports et documentation des méthodologies utilisées" },
+            { nom: "KoboToolBox", pct: 65, niveau: "Intermédiaire", desc: "Création de formulaires d'enquête, collecte de données terrain avec/sans connexion, analyse des résultats, export vers Excel et gestion des données collectées" },
+            { nom: "PowerPoint", pct: 95, niveau: "Avancé", desc: "Création de présentations professionnelles, insertion de cartes et graphiques, animations maîtrisées, mise en page soignée pour rapports et soutenances" }
         ]
     }
 ];
@@ -564,7 +566,7 @@ function renderCompetences() {
     const wrapper = document.getElementById('skills-wrapper');
     
     if (!wrapper) {
-        console.error('❌ Élément #skills-wrapper introuvable dans le HTML !');
+        console.error('❌ Élément #skills-wrapper introuvable !');
         return;
     }
     
@@ -575,22 +577,35 @@ function renderCompetences() {
         block.className = 'skill-category reveal';
         block.style.animationDelay = `${ci * 0.15}s`;
 
-        const skillsHTML = cat.skills.map((s, si) => `
-            <div class="skill-item" style="animation-delay:${si * 0.1}s">
-                <div class="skill-header">
-                    <span class="skill-name">${s.nom}</span>
-                    <span class="skill-level-badge ${s.levelClass}">${s.niveau}</span>
+        const skillsHTML = cat.skills.map((s, si) => {
+            const radius = 40;
+            const circumference = 2 * Math.PI * radius;
+            const offset = circumference - (s.pct / 100) * circumference;
+            
+            return `
+                <div class="skill-circle-item" style="animation-delay:${si * 0.1}s" data-skill="${s.nom}">
+                    <div class="skill-circle-container">
+                        <svg class="skill-circle-svg" viewBox="0 0 100 100">
+                            <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                            <circle class="skill-circle-fill" cx="50" cy="50" r="40"
+                                style="stroke-dasharray: ${circumference}; stroke-dashoffset: ${offset};">
+                            </circle>
+                            <text class="skill-circle-percent" x="50" y="55" text-anchor="middle">${s.pct}%</text>
+                        </svg>
+                        <div class="skill-circle-info">
+                            <div class="skill-circle-header">
+                                <h4 class="skill-circle-name">${s.nom}</h4>
+                                <span class="skill-level-badge ${s.niveau === 'Avancé' ? 'level-advanced' : (s.niveau === 'Intermédiaire' ? 'level-intermediate' : 'level-beginner')}">${s.niveau}</span>
+                                <span class="skill-click-icon"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="skill-circle-desc-container">
+                                <p class="skill-circle-desc">${s.desc}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-info">
-                    <span class="skill-pct">${s.pct}%</span>
-                    <span class="skill-level-text">${s.niveau}</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-fill" data-pct="${s.pct}" style="width:0%"></div>
-                </div>
-                <div class="skill-description">${s.desc}</div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
 
         block.innerHTML = `
             <div class="category-header">
@@ -598,24 +613,42 @@ function renderCompetences() {
                 <h3 class="skill-cat-title">${cat.categorie.substring(2)}</h3>
             </div>
             <p class="category-description">${cat.description}</p>
-            <div class="skill-list">${skillsHTML}</div>
+            <div class="skill-circles-list">${skillsHTML}</div>
         `;
         wrapper.appendChild(block);
     });
 
-    const barObs = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-                    setTimeout(() => { bar.style.width = bar.dataset.pct + '%'; }, 200);
+    // Gestion du clic sur toute la carte
+    document.querySelectorAll('.skill-circle-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const descContainer = this.querySelector('.skill-circle-desc-container');
+            const icon = this.querySelector('.skill-click-icon i');
+            
+            if (descContainer) {
+                const isVisible = descContainer.classList.contains('show');
+                
+                // Fermer toutes les autres descriptions
+                document.querySelectorAll('.skill-circle-desc-container').forEach(container => {
+                    if (container !== descContainer && container.classList.contains('show')) {
+                        container.classList.remove('show');
+                        const otherIcon = container.closest('.skill-circle-item')?.querySelector('.skill-click-icon i');
+                        if (otherIcon) otherIcon.className = 'fas fa-chevron-down';
+                    }
                 });
-                barObs.unobserve(entry.target);
+                
+                // Basculer la description cliquée
+                if (isVisible) {
+                    descContainer.classList.remove('show');
+                    if (icon) icon.className = 'fas fa-chevron-down';
+                } else {
+                    descContainer.classList.add('show');
+                    if (icon) icon.className = 'fas fa-chevron-up';
+                }
             }
         });
-    }, { threshold: 0.3 });
-    wrapper.querySelectorAll('.skill-category').forEach(el => barObs.observe(el));
+    });
 }
-
 // ===== REVEAL AU SCROLL =====
 function initReveal() {
     const obs = new IntersectionObserver((entries) => {
