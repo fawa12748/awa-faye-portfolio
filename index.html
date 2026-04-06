@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Awa Faye - Portfolio Géomatique</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="JS/app.js" defer></script>
+</head>
+<body data-theme="light">
+    <!-- ===== CURSEUR PERSONNALISÉ ===== -->
+    <div class="custom-cursor"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="logo">✨Portfolio✨</a>
+            
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#a-propos" class="nav-link">À propos</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#competences" class="nav-link">Compétences</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <div class="qr-trigger" id="qrBtn">
+                   <i class="fas fa-qrcode"></i>
+                   <span>QR Code</span>
+                </div>
+                <button class="theme-btn" id="themeBtn">
+                    <span class="theme-icon" id="tIcon">☀️</span>
+                    <span id="tLabel">Clair</span>
+                </button>
+            </div>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== SECTION ACCUEIL ===== -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-main">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-wave">👋</span>
+                        <span class="greeting-text">Bonjour, je suis</span>
+                    </div>
+                    <div class="hero-name-wrapper">
+                        <h1 class="hero-name">Awa Faye</h1>
+                    </div>
+                    <div class="hero-title-wrapper">
+                        <h2 class="hero-title" id="typing-title"></h2>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Étudiante en Géomatique, cartographie passionnée, l'analyse spatiale et les systèmes d'information géographique.
+                        Je conçois des applications cartographiques interactives et des visualisations de données.
+                        L'innovation technologique au service de la géomatique.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="pdf/cv.pdf" class="btn-cv-hero" id="download-cv-hero" download>
+                          <i class="fas fa-download"></i> Télécharger CV
+                          <span class="btn-arrow">→</span>
+                        </a>
+    
+                        <a href="#projets" class="btn-projects-hero">
+                            <i class="fas fa-code-branch"></i> Voir mes projets
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+    
+                        <!-- BOUTON "En savoir plus" vers la section À propos -->
+                        <a href="#a-propos" class="btn-about-hero" id="open-about-hero">
+                            <i class="fas fa-user-circle"></i> En savoir plus
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="hero-image">
+                        <div class="hero-avatar">
+                            <div class="avatar-circle">
+                               <img src="image/moi.jpeg" alt="Awa Faye" class="avatar-img" onerror="this.src='https://via.placeholder.com/400/2c3e50/ffffff?text=Awa'">
+                            </div>
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-pulse"></div>
+                        </div>
+                    </div>
+        
+                    <!-- RÉSEAUX SOCIAUX SOUS LA PHOTO -->
+                    <div class="hero-social">
+                        <a href="https://github.com/fawa12748" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/awa-faye-2a0b123b6/" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/awafaye2776/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:fawa12748@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">PROJETS RÉALISÉS</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">CARTES CRÉÉES</span>
+                </div>
+                <div class="stat-card">
+                   <span class="stat-number">100<span class="percent-sign">%</span></span>
+                   <span class="stat-label">PASSION</span>
+                </div>
+            </div>
+        </div>   
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+    
+    <!-- ===== SECTION À PROPOS ===== -->
+    <section id="a-propos" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user-circle"></i>À propos de moi</h2>
+            <div class="apropos-haut">
+                <div class="apropos-photo">
+                    <div class="photo-placeholder">
+                       <img src="image/moi.jpeg" alt="Awa Faye" class="photo-profil" onerror="this.src='https://via.placeholder.com/400/2c3e50/ffffff?text=Awa'">
+                    </div>
+                </div>
+                <div class="apropos-bio">
+                    <h3>Étudiante en Licence 2 Géomatique</h3>
+                    <p>Passionnée par l'analyse des données spatiales et la cartographie, je me forme actuellement à l'Université Iba Der Thiam de Thiès.<br>
+                        Ma formation m'a permis d'acquérir une solide expertise dans l'utilisation d'outils spécialisés comme <strong>QGIS</strong> pour la cartographie<br>
+                        et <strong>RStudio</strong> pour l'analyse statistique des données géographiques.</p>
+                    <p>Je développe également des compétences en <strong>développement web</strong> (HTML, CSS, JavaScript) pour créer des applications cartographiques interactives tout en rendant la Géomatique accessible à tous.</p>
+                </div>
+            </div>
+            <div class="colonnes-container">
+                <div class="colonne">
+                    <h3 class="colonne-titre"><i class="fas fa-graduation-cap"></i> Parcours</h3>
+                    <div class="timeline-item">
+                        <span class="annee">2025-2026</span>
+                        <h4>Licence 2 Géomatique</h4>
+                        <p>Université Iba Der Thiam, Thiès</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="annee">2024-2025</span>
+                        <h4>Licence 1 Géomatique</h4>
+                        <p>Université Iba Der Thiam, Thiès</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="annee">2024</span>
+                        <h4>Baccalauréat S2</h4>
+                        <p>Lycée de Thiès</p>
+                    </div>
+                    <h4 class="langues-titre"><i class="fas fa-language"></i> Langues</h4>
+                    <div class="langues">
+                        <span class="langue">Français</span>
+                        <span class="langue">Anglais</span>
+                        <span class="langue">Wolof</span>
+                    </div>
+                </div>
+                <div class="colonne">
+                    <h3 class="colonne-titre"><i class="fas fa-bullseye"></i> Objectifs</h3>
+                    <ul class="objectifs-liste">
+                        <li>Créer des cartes interactives pour visualiser les infrastructures urbaines</li>
+                        <li>Renforcer mes compétences en développement web SIG</li>
+                        <li>Développer une application web pour la gestion des infrastructures urbaines</li>
+                        <li>Contribuer à des projets d'aménagement du territoire avec la géomatique</li>
+                    </ul>
+                </div>
+                <div class="colonne">
+                    <h3 class="colonne-titre"><i class="fas fa-briefcase"></i> Expérience</h3>
+                    <div class="experience-item">
+                        <h4>Base de données spatiales</h4>
+                        <ul class="experience-liste">
+                            <li>Réalisation de cartes thématiques sous QGIS</li>
+                            <li>Numérisation de données spatiales</li>
+                            <li>Analyse de la dynamique urbaine</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h4>Analyse statistique avec RStudio</h4>
+                        <ul class="experience-liste">
+                            <li>Traitement de données géographiques</li>
+                            <li>Analyses spatiales et statistiques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION PROJETS ===== -->
+    <section id="projets" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-code-branch"></i> Mes Projets</h2>
+            
+            <div class="projets-filtres">
+                <button class="filtre-btn active" data-filtre="tous">Tous</button>
+                <button class="filtre-btn" data-filtre="sig">SIG</button>
+                <button class="filtre-btn" data-filtre="web">Web</button>
+                <button class="filtre-btn" data-filtre="data">Data</button>
+            </div>
+            
+            <div class="projets-cartes" id="projets-container"></div>
+        </div>
+    </section>
+
+    <!-- ===== BOUTON GALERIE DÉPLACÉ ICI (après la section Projets) ===== -->
+    <div class="galerie-section-wrapper">
+        <div class="container">
+            <div class="galerie-trigger-container">
+                <button id="galerie-trigger-btn" class="galerie-trigger-btn">
+                    <i class="fas fa-images"></i>
+                    <span>Explorer la galerie</span>
+                    <i class="fas fa-camera-retro"></i>
+                </button>
+                <p class="galerie-trigger-desc">Découvrez mes réalisations en images</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SECTION COMPÉTENCES ===== -->
+    <section id="competences" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> Mes Compétences</h2>
+            <div class="skills-wrapper" id="skills-wrapper"></div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION CONTACT ===== -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Me contacter</h2>
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong>
+                            <span>fawa12748@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <span>+221 70 790 88 06</span>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <strong>Localisation</strong>
+                            <span>Diourbel, Sénégal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="nom">Nom complet <span class="required">*</span></label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                        <span class="field-error" id="error-nom"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adresse email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com">
+                        <span class="field-error" id="error-email"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message..."></textarea>
+                        <span class="field-error" id="error-message"></span>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer
+                        </button>
+                        <button type="button" class="btn btn-reset" id="reset-btn">
+                            <i class="fas fa-undo-alt"></i>
+                            Réinitialiser
+                        </button>
+                    </div>
+                    
+                    <div id="form-feedback" class="form-feedback"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOUTON RETOUR EN HAUT ===== -->
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== BOUTON PARTAGER ===== -->
+    <button id="share-btn" class="share-btn" aria-label="Partager">
+        <i class="fas fa-share-alt"></i>
+    </button>
+
+    <!-- ===== BOUTONS DE VUE RESPONSIVE ===== -->
+    <div class="view-toggle-container">
+        <button class="view-toggle-btn" data-view="desktop" data-tooltip="Vue Desktop">
+            <i class="fas fa-desktop"></i>
+        </button>
+        <button class="view-toggle-btn" data-view="tablet" data-tooltip="Vue Tablette">
+            <i class="fas fa-tablet-alt"></i>
+        </button>
+        <button class="view-toggle-btn" data-view="mobile" data-tooltip="Vue Mobile">
+            <i class="fas fa-mobile-alt"></i>
+        </button>
+    </div>
+
+    <!-- ===== MODAL PARTAGE ===== -->
+    <div id="share-modal" class="share-modal">
+        <div class="share-modal-content">
+            <div class="share-modal-header">
+                <h3><i class="fas fa-share-alt"></i> Partager ce portfolio</h3>
+                <button class="share-modal-close">&times;</button>
+            </div>
+            <div class="share-modal-body">
+                <p>Partagez le portfolio d'Awa Faye</p>
+                <div class="share-options">
+                    <button class="share-option" data-platform="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </button>
+                    <button class="share-option" data-platform="github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </button>
+                    <button class="share-option" data-platform="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </button>
+                    <button class="share-option" data-platform="copy">
+                        <i class="fas fa-link"></i>
+                        <span>Copier</span>
+                    </button>
+                </div>
+                <div id="share-feedback" class="share-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AWA FAYE</div>
+                <p>© 2026 Awa Faye | Tous droits réservés</p>
+                <p>Licence 2 Géomatique - Université Iba Der Thiam de Thiès</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
