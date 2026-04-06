@@ -52,42 +52,41 @@ const competences = [
         categorie: "🗺️ SIG & Cartographie",
         description: "Maîtrise des outils de Systèmes d'Information Géographique pour la création de cartes thématiques et l'analyse spatiale.",
         skills: [
-            { nom: "QGIS", pct: 95, niveau: "Avancé", desc: "Cartographie thématique avancée, géoréférencement, numérisation de données vectorielles, analyses spatiales, création de mise en page et impression de cartes professionnelles" },
-            { nom: "ArcGIS", pct: 85, niveau: "Avancé", desc: "numérisation, analyses spatiales, création de cartes et utilisation de ArcCatalog pour la gestion des données" },
-            { nom: "Télédétection", pct: 65, niveau: "Intermédiaire", desc: "Analyse d'images satellitaires (Landsat, Sentinel), calcul d'indices spectraux (NDVI, NDWI), classification non supervisée et détection des changements" }
+            { nom: "QGIS", icone: "fas fa-map", pct: 95, niveau: "Avancé", desc: "Cartographie thématique avancée, géoréférencement, numérisation de données vectorielles, analyses spatiales, création de mise en page et impression de cartes professionnelles" },
+            { nom: "ArcGIS", icone: "fas fa-globe", pct: 85, niveau: "Avancé", desc: "numérisation, analyses spatiales, création de cartes et utilisation de ArcCatalog pour la gestion des données" },
+            { nom: "Télédétection", icone: "fas fa-satellite", pct: 65, niveau: "Intermédiaire", desc: "Analyse d'images satellitaires (Landsat, Sentinel), calcul d'indices spectraux (NDVI, NDWI), classification non supervisée et détection des changements" }
         ]
     },
     {
         categorie: "💻 Développement Web",
         description: "Création d'interfaces web modernes et d'applications cartographiques interactives accessibles à tous.",
         skills: [
-            { nom: "HTML & CSS", pct: 80, niveau: "Avancé", desc: "Intégration, responsive design (mobile-first), animations CSS, variables CSS pour les animations" },
-            { nom: "JavaScript", pct: 70, niveau: "Intermédiaire", desc: "Manipulation du DOM, événements, création de modales, animations et interactions utilisateur" },
-            { nom: "Git & GitHub", pct: 45, niveau: "Débutant", desc: "Versionnage de code avec Git, création de dépôts sur GitHub, commits, push/pull, gestion de branches et déploiement de sites sur GitHub Pages." }
+            { nom: "HTML & CSS", icone: "fab fa-html5", pct: 80, niveau: "Avancé", desc: "Intégration, responsive design (mobile-first), animations CSS, variables CSS pour les animations" },
+            { nom: "JavaScript", icone: "fab fa-js", pct: 70, niveau: "Intermédiaire", desc: "Manipulation du DOM, événements, création de modales, animations et interactions utilisateur" },
+            { nom: "Git & GitHub", icone: "fab fa-github", pct: 45, niveau: "Débutant", desc: "Versionnage de code avec Git, création de dépôts sur GitHub, commits, push/pull, gestion de branches et déploiement de sites sur GitHub Pages." }
         ]
     },
     {
         categorie: "📊 Analyse de données",
         description: "Traitement statistique et analyse de données géographiques pour en extraire des informations pertinentes.",
         skills: [
-            { nom: "RStudio", pct: 95, niveau: "Avancé", desc: "Statistiques spatiales, visualisation de données, analyses multivariées, régressions spatiales et création de rapports dynamiques avec R Markdown" },
-            { nom: "Python", pct: 80, niveau: "Avancé", desc: "Découverte de Python pour l'analyse de données. Apprentissage des bases : variables, boucles, fonctions" },
-            { nom: "Excel / Tableur", pct: 80, niveau: "Avancé", desc: "Analyse statistique descriptive, tableaux croisés dynamiques, création de graphiques cartographiques, traitement et nettoyage de données pour la géomatique" },
-            { nom: "MySQL", pct: 65, niveau: "Intermédiaire", desc: "Requêtes SQL, gestion de bases de données , création et manipulation de tables et jointures" }
+            { nom: "RStudio", icone: "fab fa-r-project", pct: 95, niveau: "Avancé", desc: "Statistiques spatiales, visualisation de données, analyses multivariées, régressions spatiales et création de rapports dynamiques avec R Markdown" },
+            { nom: "Python", icone: "fab fa-python", pct: 80, niveau: "Avancé", desc: "Découverte de Python pour l'analyse de données. Apprentissage des bases : variables, boucles, fonctions" },
+            { nom: "Excel", icone: "fas fa-file-excel", pct: 80, niveau: "Avancé", desc: "Analyse statistique descriptive, tableaux croisés dynamiques, création de graphiques cartographiques, traitement et nettoyage de données pour la géomatique" },
+            { nom: "MySQL", icone: "fas fa-database", pct: 65, niveau: "Intermédiaire", desc: "Requêtes SQL, gestion de bases de données , création et manipulation de tables et jointures" }
         ]
     },
     {
         categorie: "🎨 Outils & Méthodes",
         description: "Utilisation d'outils complémentaires pour la production de documents professionnels et la gestion de projets.",
         skills: [
-            { nom: "Design cartographique", pct: 60, niveau: "Intermédiaire", desc: "Conception de cartes esthétiques et fonctionnelles, choix des couleurs et symboles, hiérarchisation de l'information, création de légendes et d'habillages cartographiques" },
-            { nom: "Méthodologie projet", pct: 75, niveau: "Avancé", desc: "Planification de projet, gestion des tâches, respect des délais, travail en équipe, rédaction de rapports et documentation des méthodologies utilisées" },
-            { nom: "KoboToolBox", pct: 65, niveau: "Intermédiaire", desc: "Création de formulaires d'enquête, collecte de données terrain avec/sans connexion, analyse des résultats, export vers Excel et gestion des données collectées" },
-            { nom: "PowerPoint", pct: 95, niveau: "Avancé", desc: "Création de présentations professionnelles, insertion de cartes et graphiques, animations maîtrisées, mise en page soignée pour rapports et soutenances" }
+            { nom: "Design cartographique", icone: "fas fa-palette", pct: 60, niveau: "Intermédiaire", desc: "Conception de cartes esthétiques et fonctionnelles, choix des couleurs et symboles, hiérarchisation de l'information, création de légendes et d'habillages cartographiques" },
+            { nom: "Méthodologie projet", icone: "fas fa-tasks", pct: 75, niveau: "Avancé", desc: "Planification de projet, gestion des tâches, respect des délais, travail en équipe, rédaction de rapports et documentation des méthodologies utilisées" },
+            { nom: "KoboToolBox", icone: "fas fa-mobile-alt", pct: 65, niveau: "Intermédiaire", desc: "Création de formulaires d'enquête, collecte de données terrain avec/sans connexion, analyse des résultats, export vers Excel et gestion des données collectées" },
+            { nom: "PowerPoint", icone: "fas fa-chalkboard", pct: 95, niveau: "Avancé", desc: "Création de présentations professionnelles, insertion de cartes et graphiques, animations maîtrisées, mise en page soignée pour rapports et soutenances" }
         ]
     }
 ];
-
 // ===== DONNÉES GALERIE =====
 const galeriePhotos = [
     { src: "image/galerie/trf1.png", alt: "Projets trafic", caption: "Carte de chaleur du trafic total" },
@@ -561,7 +560,6 @@ function initFiltres() {
     });
 }
 
-// ===== RENDU COMPÉTENCES =====
 function renderCompetences() {
     const wrapper = document.getElementById('skills-wrapper');
     
@@ -594,7 +592,9 @@ function renderCompetences() {
                         </svg>
                         <div class="skill-circle-info">
                             <div class="skill-circle-header">
-                                <h4 class="skill-circle-name">${s.nom}</h4>
+                                <h4 class="skill-circle-name">
+                                    <i class="${s.icone}"></i> ${s.nom}
+                                </h4>
                                 <span class="skill-level-badge ${s.niveau === 'Avancé' ? 'level-advanced' : (s.niveau === 'Intermédiaire' ? 'level-intermediate' : 'level-beginner')}">${s.niveau}</span>
                                 <span class="skill-click-icon"><i class="fas fa-chevron-down"></i></span>
                             </div>
@@ -628,7 +628,6 @@ function renderCompetences() {
             if (descContainer) {
                 const isVisible = descContainer.classList.contains('show');
                 
-                // Fermer toutes les autres descriptions
                 document.querySelectorAll('.skill-circle-desc-container').forEach(container => {
                     if (container !== descContainer && container.classList.contains('show')) {
                         container.classList.remove('show');
@@ -637,7 +636,6 @@ function renderCompetences() {
                     }
                 });
                 
-                // Basculer la description cliquée
                 if (isVisible) {
                     descContainer.classList.remove('show');
                     if (icon) icon.className = 'fas fa-chevron-down';
