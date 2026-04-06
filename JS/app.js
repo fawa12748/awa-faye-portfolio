@@ -29,8 +29,9 @@ const PROJETS = [
         description: "Vitrine en ligne pour présenter compétences, projets et formulaire de contact.",
         tags: ["VScode", "HTML5", "CSS3", "JavaScript"],
         categorie: "web",
-        lien: "pdf/portf.pdf",
+        lien: "https://fawa12748.github.io/awa-faye-portfolio/",
         image: "image/portf.png"
+        
     },
     {
         id: 4,
