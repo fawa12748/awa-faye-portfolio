@@ -533,8 +533,21 @@ body {
         font-size: 0.8rem;
     }
     
+    /* QR CODE visible sur mobile - CORRECTION */
     .qr-trigger {
-        display: none;
+        display: flex !important;
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.75rem !important;
+        gap: 0.3rem !important;
+    }
+    
+    .qr-trigger span {
+        display: inline !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .qr-trigger i {
+        font-size: 0.9rem !important;
     }
 }
 /* ===== SECTION ACCUEIL (HERO) ===== */
@@ -2210,16 +2223,21 @@ body {
         left: auto;
     }
     
-    /* QR code visible sur mobile (optionnel) */
+    /* QR code visible sur mobile - CORRECTION */
     .qr-trigger {
-        display: flex;
-        padding: 0.3rem 0.6rem;
-        font-size: 0.7rem;
+        display: flex !important;
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.75rem !important;
+        gap: 0.3rem !important;
     }
     
     .qr-trigger span {
-        display: inline;
-        font-size: 0.65rem;
+        display: inline !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .qr-trigger i {
+        font-size: 0.9rem !important;
     }
     
     .theme-btn {
@@ -2322,6 +2340,17 @@ body {
         justify-content: center;
         margin-top: 1rem;
         margin-left: 0;
+        display: flex !important;
+    }
+    
+    /* Correction GitHub sur mobile */
+    .social-icon {
+        width: 45px !important;
+        height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.3rem !important;
     }
     
     .hero-greeting {
@@ -2602,80 +2631,8 @@ body {
         margin-top: 0.1rem !important;
     }
 }
-Pour très petit
-    
-    /* ===== BOUTONS FLOTTANTS ===== */
-    .back-to-top {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-        bottom: 20px;
-        right: 20px;
-        z-index: 10002;
-    }
-    
-    .share-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-        bottom: 80px;
-        right: 20px;
-        z-index: 10002;
-    }
-    
-    .view-toggle-container {
-        display: none;
-    }
-    
-    /* ===== TITRES ===== */
-    .section-title {
-        font-size: 1.6rem;
-    }
-    
-    .section-title i {
-        font-size: 1.3rem;
-        padding: 0.3rem;
-    }
-    
-    /* ===== GALERIE ===== */
-    .galerie-trigger-btn {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.9rem;
-    }
-    
-    .galerie-trigger-btn i {
-        font-size: 1rem;
-    }
-    
-    .galerie-trigger-desc {
-        font-size: 0.7rem;
-    }
-    
-    /* ===== FOOTER ===== */
-    .footer {
-        padding: 1.5rem 0;
-    }
-    
-    .footer-logo {
-        font-size: 1.3rem;
-    }
-    
-    .footer p {
-        font-size: 0.7rem;
-    }
-    
-    .footer-social {
-        gap: 0.6rem;
-    }
-    
-    .footer-social-link {
-        width: 32px;
-        height: 32px;
-        font-size: 0.9rem;
-    }
 
-
-/* Très petit mobile (max-width: 480px) */
+/* Pour très petit mobile */
 @media (max-width: 480px) {
     .hero-avatar {
         width: 200px;
@@ -2738,11 +2695,12 @@ Pour très petit
     }
     
     .qr-trigger span {
-        display: none;
+        display: inline !important;
+        font-size: 0.6rem !important;
     }
     
     .qr-trigger {
-        padding: 0.3rem 0.5rem;
+        padding: 0.3rem 0.5rem !important;
     }
     
     .section-title {
