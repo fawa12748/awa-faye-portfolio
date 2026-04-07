@@ -2734,7 +2734,14 @@ body {
         font-size: 0.6rem;
     }
 }
+/* ===== MASQUER LES BOUTONS DE VUE RESPONSIVE SUR MOBILE ===== */
 
+/* Masquer sur mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .view-toggle-container {
+        display: none !important;
+    }
+}
 /* Réduction des animations (accessibilité) */
 @media (prefers-reduced-motion: reduce) {
     * {
