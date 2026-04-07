@@ -52,9 +52,9 @@ const competences = [
         categorie: "🗺️ SIG & Cartographie",
         description: "Maîtrise des outils de Systèmes d'Information Géographique pour la création de cartes thématiques et l'analyse spatiale.",
         skills: [
-            { nom: "QGIS", icone: "fas fa-map", pct: 95, niveau: "Avancé", desc: "Cartographie thématique avancée, géoréférencement, numérisation de données vectorielles, analyses spatiales, création de mise en page et impression de cartes professionnelles" },
+            { nom: "QGIS", icone: "fas fa-map", pct: 95, niveau: "Avancé", desc: "Cartographie thématique avancée, géoréférencement, numérisation de données vectorielles, analyses spatiales, création de mise en page " },
             { nom: "ArcGIS", icone: "fas fa-globe", pct: 85, niveau: "Avancé", desc: "numérisation, analyses spatiales, création de cartes et utilisation de ArcCatalog pour la gestion des données" },
-            { nom: "Télédétection", icone: "fas fa-satellite", pct: 65, niveau: "Intermédiaire", desc: "Analyse d'images satellitaires (Landsat, Sentinel), calcul d'indices spectraux (NDVI, NDWI), classification non supervisée et détection des changements" }
+            { nom: "Télédétection", icone: "fas fa-satellite", pct: 65, niveau: "Intermédiaire", desc: "Analyse d'images satellitaires (Landsat, Sentinel), calcul d'indices spectraux (NDVI, NDWI), classification non supervisée " }
         ]
     },
     {
@@ -63,16 +63,16 @@ const competences = [
         skills: [
             { nom: "HTML & CSS", icone: "fab fa-html5", pct: 80, niveau: "Avancé", desc: "Intégration, responsive design (mobile-first), animations CSS, variables CSS pour les animations" },
             { nom: "JavaScript", icone: "fab fa-js", pct: 70, niveau: "Intermédiaire", desc: "Manipulation du DOM, événements, création de modales, animations et interactions utilisateur" },
-            { nom: "Git & GitHub", icone: "fab fa-github", pct: 45, niveau: "Débutant", desc: "Versionnage de code avec Git, création de dépôts sur GitHub, commits, push/pull, gestion de branches et déploiement de sites sur GitHub Pages." }
+            { nom: "Git & GitHub", icone: "fab fa-github", pct: 45, niveau: "Débutant", desc: "Versionnage de code avec Git, création de dépôts sur GitHub et déploiement de sites sur GitHub Pages." }
         ]
     },
     {
         categorie: "📊 Analyse de données",
         description: "Traitement statistique et analyse de données géographiques pour en extraire des informations pertinentes.",
         skills: [
-            { nom: "RStudio", icone: "fab fa-r-project", pct: 95, niveau: "Avancé", desc: "Statistiques spatiales, visualisation de données, analyses multivariées, régressions spatiales et création de rapports dynamiques avec R Markdown" },
+            { nom: "RStudio", icone: "fab fa-r-project", pct: 95, niveau: "Avancé", desc: "Statistiques spatiales, visualisation de données, analyses multivariées, régressions spatiales et R Markdown" },
             { nom: "Python", icone: "fab fa-python", pct: 80, niveau: "Avancé", desc: "Découverte de Python pour l'analyse de données. Apprentissage des bases : variables, boucles, fonctions" },
-            { nom: "Excel", icone: "fas fa-file-excel", pct: 80, niveau: "Avancé", desc: "Analyse statistique descriptive, tableaux croisés dynamiques, création de graphiques cartographiques, traitement et nettoyage de données pour la géomatique" },
+            { nom: "Excel", icone: "fas fa-file-excel", pct: 80, niveau: "Avancé", desc: "Analyse statistique descriptive, tableaux croisés dynamiques, création de graphiques cartographiques, traitement et nettoyage de données " },
             { nom: "MySQL", icone: "fas fa-database", pct: 65, niveau: "Intermédiaire", desc: "Requêtes SQL, gestion de bases de données , création et manipulation de tables et jointures" }
         ]
     },
@@ -80,10 +80,10 @@ const competences = [
         categorie: "🎨 Outils & Méthodes",
         description: "Utilisation d'outils complémentaires pour la production de documents professionnels et la gestion de projets.",
         skills: [
-            { nom: "Design cartographique", icone: "fas fa-palette", pct: 60, niveau: "Intermédiaire", desc: "Conception de cartes esthétiques et fonctionnelles, choix des couleurs et symboles, hiérarchisation de l'information, création de légendes et d'habillages cartographiques" },
-            { nom: "Méthodologie projet", icone: "fas fa-tasks", pct: 75, niveau: "Avancé", desc: "Planification de projet, gestion des tâches, respect des délais, travail en équipe, rédaction de rapports et documentation des méthodologies utilisées" },
-            { nom: "KoboToolBox", icone: "fas fa-mobile-alt", pct: 65, niveau: "Intermédiaire", desc: "Création de formulaires d'enquête, collecte de données terrain avec/sans connexion, analyse des résultats, export vers Excel et gestion des données collectées" },
-            { nom: "PowerPoint", icone: "fas fa-chalkboard", pct: 95, niveau: "Avancé", desc: "Création de présentations professionnelles, insertion de cartes et graphiques, animations maîtrisées, mise en page soignée pour rapports et soutenances" }
+            { nom: "Design cartographique", icone: "fas fa-palette", pct: 60, niveau: "Intermédiaire", desc: "Conception de cartes esthétiques et fonctionnelles, choix des couleurs et symboles, création de légendes" },
+            { nom: "Méthodologie projet", icone: "fas fa-tasks", pct: 75, niveau: "Avancé", desc: "Planification de projet, gestion des tâches, respect des délais, travail en équipe, rédaction de rapports ,méthodologies utilisées" },
+            { nom: "KoboToolBox", icone: "fas fa-mobile-alt", pct: 65, niveau: "Intermédiaire", desc: "Création de formulaires d'enquête, analyse des résultats, export vers Excel et gestion des données collectées" },
+            { nom: "PowerPoint", icone: "fas fa-chalkboard", pct: 95, niveau: "Avancé", desc: "Création de présentations professionnelles, insertion de cartes et graphiques, animations maîtrisées" }
         ]
     }
 ];
@@ -309,25 +309,38 @@ function updateThemeUI(theme, icon, label) {
         if (label) label.textContent = 'Clair';
     }
 }
-
 // ===== MENU HAMBURGER =====
 function initHamburger() {
     const hamburger = document.querySelector('.hamburger');
-    const navMenu   = document.querySelector('.nav-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
     if (!hamburger || !navMenu) return;
-
+    
+    // Créer l'overlay
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+    }
+    
     const closeMenu = () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        overlay.classList.remove('active');
         document.body.style.overflow = '';
+        document.body.style.position = '';
     };
-
+    
     const openMenu = () => {
         hamburger.classList.add('active');
         navMenu.classList.add('active');
+        overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
     };
-
+    
     hamburger.addEventListener('click', (e) => {
         e.stopPropagation();
         if (navMenu.classList.contains('active')) {
@@ -336,20 +349,22 @@ function initHamburger() {
             openMenu();
         }
     });
-
+    
+    // Fermer en cliquant sur l'overlay
+    overlay.addEventListener('click', closeMenu);
+    
+    // Fermer en cliquant sur un lien
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
-
-    document.addEventListener('click', (e) => {
-        if (navMenu.classList.contains('active') && 
-            !hamburger.contains(e.target) && 
-            !navMenu.contains(e.target)) {
+    
+    // Fermer avec la touche Echap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             closeMenu();
         }
     });
 }
-
 // ===== SCROLL SPY =====
 function initScrollSpy() {
     const navbar   = document.querySelector('.navbar');
