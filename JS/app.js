@@ -330,6 +330,7 @@ function initHamburger() {
         overlay.classList.remove('active');
         document.body.style.overflow = '';
         document.body.style.position = '';
+        document.body.style.width = '';
     };
     
     const openMenu = () => {
@@ -350,21 +351,24 @@ function initHamburger() {
         }
     });
     
-    // Fermer en cliquant sur l'overlay
     overlay.addEventListener('click', closeMenu);
     
-    // Fermer en cliquant sur un lien
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
     
-    // Fermer avec la touche Echap
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             closeMenu();
         }
     });
 }
+
+// Appeler dans DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    initHamburger();
+    // ... vos autres initialisations
+});
 // ===== SCROLL SPY =====
 function initScrollSpy() {
     const navbar   = document.querySelector('.navbar');
