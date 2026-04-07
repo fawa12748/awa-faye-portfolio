@@ -350,15 +350,12 @@ function initHamburger() {
         }
     });
     
-    // Fermer en cliquant sur l'overlay
     overlay.addEventListener('click', closeMenu);
     
-    // Fermer en cliquant sur un lien
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
     
-    // Fermer avec la touche Echap
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             closeMenu();
