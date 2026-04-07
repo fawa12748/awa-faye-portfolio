@@ -435,38 +435,26 @@ body {
 }
 .theme-btn:hover .theme-icon { transform: rotate(15deg); }
 
-/* ===== MENU HAMBURGER - STYLE ASTOU ===== */
+/* ===== HAMBURGER MENU ===== */
 .hamburger {
     display: none;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
     cursor: pointer;
     z-index: 1002;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    border-radius: 10px;
+    position: relative;
 }
-
 .bar {
     width: 25px;
     height: 2px;
     background: white;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
+.hamburger.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active .bar:nth-child(2) { opacity: 0; }
+.hamburger.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Menu mobile */
+/* MENU MOBILE */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -477,7 +465,7 @@ body {
         top: 0;
         right: -100%;
         width: 70%;
-        max-width: 280px;
+        max-width: 300px;
         height: 100vh;
         background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
         flex-direction: column;
@@ -488,8 +476,6 @@ body {
         transition: right 0.3s ease-in-out;
         z-index: 1001;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-        margin: 0;
-        list-style: none;
     }
     
     .nav-menu.active {
@@ -497,13 +483,11 @@ body {
     }
     
     .nav-link {
-        color: white !important;
         font-size: 1.2rem;
         padding: 0.5rem;
-        font-weight: 500;
     }
     
-    /* Overlay sombre */
+    /* Overlay sombre quand menu ouvert */
     .menu-overlay {
         position: fixed;
         top: 0;
@@ -521,23 +505,36 @@ body {
         opacity: 1;
         visibility: visible;
     }
+}
+/* Correction navbar mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0;
+    }
     
-    /* Ajustement navbar */
     .nav-container {
+        padding: 0.8rem 1rem;
         justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+        margin: 0;
+        z-index: 1002;
     }
     
     .nav-buttons {
         gap: 0.5rem;
-    }
-    
-    .qr-trigger {
-        display: none;
+        z-index: 1002;
     }
     
     .theme-btn {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
+    }
+    
+    .qr-trigger {
+        display: none;
     }
 }
 /* ===== SECTION ACCUEIL (HERO) ===== */
