@@ -15,7 +15,7 @@
     <script src="JS/app.js" defer></script>
 </head>
 <body data-theme="light">
-    <!-- ===== CURSEUR PERSONNALISÉ ====git branch -M main = -->
+    <!-- ===== CURSEUR PERSONNALISÉ ===== -->
     <div class="custom-cursor"></div>
 
     <!-- ===== NAVBAR ===== -->
@@ -29,6 +29,7 @@
                 <li><a href="#projets" class="nav-link">Projets</a></li>
                 <li><a href="#competences" class="nav-link">Compétences</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
             </ul>
             
             <div class="nav-buttons">
@@ -39,6 +40,10 @@
                 <button class="theme-btn" id="themeBtn">
                     <span class="theme-icon" id="tIcon">☀️</span>
                     <span id="tLabel">Clair</span>
+                </button>
+                <button class="lang-btn" id="langBtn">
+                   <i class="fas fa-globe"></i>
+                   <span id="langLabel">FR</span>
                 </button>
             </div>
             
@@ -82,11 +87,11 @@
                             <i class="fas fa-arrow-right"></i>
                         </a>
     
-                        <!-- BOUTON "En savoir plus" vers la section À propos -->
                         <a href="#a-propos" class="btn-about-hero" id="open-about-hero">
                             <i class="fas fa-user-circle"></i> En savoir plus
                             <i class="fas fa-arrow-right"></i>
                         </a>
+
                     </div>
                 </div>
                 
@@ -101,7 +106,6 @@
                         </div>
                     </div>
         
-                    <!-- RÉSEAUX SOCIAUX SOUS LA PHOTO -->
                     <div class="hero-social">
                         <a href="https://github.com/fawa12748" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/awa-faye-2a0b123b6/" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -134,78 +138,142 @@
     </section>
     
     <!-- ===== SECTION À PROPOS ===== -->
-    <section id="a-propos" class="section">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-user-circle"></i>À propos de moi</h2>
-            <div class="apropos-haut">
-                <div class="apropos-photo">
-                    <div class="photo-placeholder">
-                       <img src="image/moi.jpeg" alt="Awa Faye" class="photo-profil" onerror="this.src='https://via.placeholder.com/400/2c3e50/ffffff?text=Awa'">
+<section id="a-propos" class="section">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-user-circle"></i>À propos de moi</h2>
+
+        <!-- NOUVEAU BLOC PROFILE HERO -->
+        <div class="profile-hero">
+
+            <!-- GAUCHE : avatar + stats -->
+            <div class="profile-left">
+                <div class="av-circle">
+                    <img src="image/moi.jpeg" alt="Awa Faye" class="photo-profil"
+                         onerror="this.style.display='none';this.parentElement.setAttribute('data-initials','AF')">
+                </div>
+                <div>
+                    <div class="pname">Awa Faye</div>
+                    <div class="ptitle">Licence 2 Géomatique<br>Université Iba Der Thiam, Thiès</div>
+                </div>
+                <div class="soc-row">
+                    <a href="https://github.com/fawa12748" class="soc-btn" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/awa-faye-2a0b123b6/" class="soc-btn" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/awafaye2776/" class="soc-btn" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:fawa12748@gmail.com" class="soc-btn" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="stat-mini">
+                    <div class="stat-m">
+                        <span class="stat-mn">4+</span>
+                        <span class="stat-ml">Projets</span>
+                    </div>
+                    <div class="stat-m">
+                        <span class="stat-mn">10+</span>
+                        <span class="stat-ml">Cartes</span>
+                    </div>
+                    <div class="stat-m">
+                        <span class="stat-mn">100%</span>
+                        <span class="stat-ml">Passion</span>
                     </div>
                 </div>
-                <div class="apropos-bio">
-                    <h3>Étudiante en Licence 2 Géomatique</h3>
-                    <p>Passionnée par l'analyse des données spatiales et la cartographie, je me forme actuellement à l'UFR Science de l'Ingénieur de l'Université Iba Der Thiam de Thiès.<br>
-                        Ma formation m'a permis d'acquérir une solide expertise dans l'utilisation d'outils spécialisés comme <strong>QGIS</strong> pour la cartographie<br>
-                        et <strong>RStudio</strong> pour l'analyse statistique des données géographiques.</p>
-                    <p>Je développe également des compétences en <strong>développement web</strong> (HTML, CSS, JavaScript) pour créer des applications cartographiques interactives tout en rendant la Géomatique accessible à tous.</p>
+            </div>
+
+            <!-- DROITE : bio + tags + langues -->
+            <div class="profile-right">
+                <p class="bio-p">
+                    Passionnée par l'analyse des données spatiales et la cartographie, je me forme à
+                    l'<b>UFR Science de l'Ingénieur</b>. Ma formation m'a permis d'acquérir une solide
+                    expertise dans l'utilisation de <b>QGIS</b> pour la cartographie et
+                    <b>RStudio</b> pour l'analyse statistique des données géographiques.
+                </p>
+                <p class="bio-p">
+                    Je développe également des compétences en <b>développement web</b>
+                    (HTML, CSS, JavaScript) pour créer des applications cartographiques interactives
+                    et rendre la géomatique accessible à tous.
+                </p>
+                <div class="tags-row">
+                    <span class="tag-pill"><i class="fas fa-map fa-xs"></i> Cartographie</span>
+                    <span class="tag-pill"><i class="fas fa-layer-group fa-xs"></i> SIG</span>
+                    <span class="tag-pill"><i class="fas fa-chart-scatter fa-xs"></i> Analyse spatiale</span>
+                    <span class="tag-pill"><i class="fas fa-code fa-xs"></i> Web carto</span>
+                </div>
+                <div style="font-size:0.72rem;color:var(--clr-text-light);margin:1rem 0 0.4rem;">Langues</div>
+                <div class="lang-row">
+                    <span class="lang-chip-new active">Français</span>
+                    <span class="lang-chip-new active">Anglais</span>
+                    <span class="lang-chip-new">Wolof</span>
                 </div>
             </div>
-            <div class="colonnes-container">
-                <div class="colonne">
-                    <h3 class="colonne-titre"><i class="fas fa-graduation-cap"></i> Parcours</h3>
-                    <div class="timeline-item">
+        </div>
+        <!-- FIN PROFILE HERO -->
+
+        <!-- 3 COLONNES (inchangées) -->
+        <div class="colonnes-container">
+            <div class="colonne">
+                <h3 class="colonne-titre"><i class="fas fa-graduation-cap"></i> Parcours</h3>
+                <div class="timeline-item">
+                    <div>
                         <span class="annee">2025-2026</span>
                         <h4>Licence 2 Géomatique</h4>
                         <p>Université Iba Der Thiam, Thiès</p>
                     </div>
-                    <div class="timeline-item">
+                </div>
+                <div class="timeline-item">
+                    <div>
                         <span class="annee">2024-2025</span>
                         <h4>Licence 1 Géomatique</h4>
                         <p>Université Iba Der Thiam, Thiès</p>
                     </div>
-                    <div class="timeline-item">
+                </div>
+                <div class="timeline-item">
+                    <div>
                         <span class="annee">2024</span>
                         <h4>Baccalauréat S2</h4>
-                        <p>Lycée de Thiès</p>
-                    </div>
-                    <h4 class="langues-titre"><i class="fas fa-language"></i> Langues</h4>
-                    <div class="langues">
-                        <span class="langue">Français</span>
-                        <span class="langue">Anglais</span>
-                        <span class="langue">Wolof</span>
+                        <p>Lycée de Dangalma</p>
                     </div>
                 </div>
-                <div class="colonne">
-                    <h3 class="colonne-titre"><i class="fas fa-bullseye"></i> Objectifs</h3>
-                    <ul class="objectifs-liste">
-                        <li>Créer des cartes interactives pour visualiser les infrastructures urbaines</li>
-                        <li>Renforcer mes compétences en développement web SIG</li>
-                        <li>Développer une application web pour la gestion des infrastructures urbaines</li>
-                        <li>Contribuer à des projets d'aménagement du territoire avec la géomatique</li>
+                
+            </div>
+
+            <div class="colonne">
+                <h3 class="colonne-titre"><i class="fas fa-bullseye"></i> Objectifs</h3>
+                <ul class="objectifs-liste">
+                    <li>Créer des cartes interactives pour visualiser les infrastructures urbaines</li>
+                    <li>Renforcer mes compétences en développement web SIG</li>
+                    <li>Développer une application web pour la gestion des infrastructures urbaines</li>
+                    <li>Contribuer à des projets d'aménagement du territoire avec la géomatique</li>
+                </ul>
+            </div>
+
+            <div class="colonne">
+                <h3 class="colonne-titre"><i class="fas fa-briefcase"></i> Expérience</h3>
+                <div class="experience-item">
+                    <h4>Base de données spatiales</h4>
+                    <ul class="experience-liste">
+                        <li>Réalisation de cartes thématiques sous QGIS</li>
+                        <li>Numérisation de données spatiales</li>
+                        <li>Analyse de la dynamique urbaine</li>
                     </ul>
                 </div>
-                <div class="colonne">
-                    <h3 class="colonne-titre"><i class="fas fa-briefcase"></i> Expérience</h3>
-                    <div class="experience-item">
-                        <h4>Base de données spatiales</h4>
-                        <ul class="experience-liste">
-                            <li>Réalisation de cartes thématiques sous QGIS</li>
-                            <li>Numérisation de données spatiales</li>
-                            <li>Analyse de la dynamique urbaine</li>
-                        </ul>
-                    </div>
-                    <div class="experience-item">
-                        <h4>Analyse statistique avec RStudio</h4>
-                        <ul class="experience-liste">
-                            <li>Traitement de données géographiques</li>
-                            <li>Analyses spatiales et statistiques</li>
-                        </ul>
-                    </div>
+                <div class="experience-item">
+                    <h4>Analyse statistique avec RStudio</h4>
+                    <ul class="experience-liste">
+                        <li>Traitement de données géographiques</li>
+                        <li>Analyses spatiales et statistiques</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <!-- ===== SECTION PROJETS ===== -->
     <section id="projets" class="section section-alt">
@@ -223,7 +291,7 @@
         </div>
     </section>
 
-    <!-- ===== BOUTON GALERIE DÉPLACÉ ICI (après la section Projets) ===== -->
+    <!-- ===== BOUTON GALERIE ===== -->
     <div class="galerie-section-wrapper">
         <div class="container">
             <div class="galerie-trigger-container">
@@ -242,6 +310,62 @@
         <div class="container">
             <h2 class="section-title"><i class="fas fa-chart-line"></i> Mes Compétences</h2>
             <div class="skills-wrapper" id="skills-wrapper"></div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION BLOG INTÉGRÉE ===== -->
+    <section id="blog" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-blog"></i> Blog Géomatique</h2>
+
+            <!-- Intro + recherche -->
+            <div class="blog-intro">
+                <div class="blog-eyebrow">
+                    <i class="fas fa-map-marked-alt"></i> Notes de terrain &amp; tutoriels SIG
+                </div>
+                <p class="blog-intro-desc">
+                    Cartographie, analyse spatiale, télédétection et web SIG — par une étudiante passionnée de géomatique.
+                </p>
+                <div class="blog-search-wrap">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="blogSearch" placeholder="Chercher un article…" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Filtres -->
+            <div class="blog-filters">
+                <button class="blog-filter-btn active" data-bcat="tous">
+                    <span class="bdot bdot-all"></span> Tous
+                </button>
+                <button class="blog-filter-btn" data-bcat="qgis">
+                    <span class="bdot bdot-qgis"></span> QGIS
+                </button>
+                <button class="blog-filter-btn" data-bcat="rstudio">
+                    <span class="bdot bdot-r"></span> RStudio
+                </button>
+                <button class="blog-filter-btn" data-bcat="websig">
+                    <span class="bdot bdot-web"></span> Web SIG
+                </button>
+            </div>
+
+            <!-- Article vedette + sidebar -->
+            <div class="blog-main-layout" id="blogMainLayout"></div>
+
+            <!-- Grille articles supplémentaires -->
+            <div class="blog-more-section">
+                <p class="blog-more-label"><i class="fas fa-layer-group"></i> &nbsp;Tous les articles</p>
+                <div class="blog-articles-grid" id="blogGrid"></div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="blog-newsletter">
+                <h3>🌍 Restez informée</h3>
+                <p>Recevez les prochains tutoriels QGIS, RStudio et Web SIG directement dans votre boîte mail.</p>
+                <form class="blog-nl-form" id="blogNlForm">
+                    <input type="email" placeholder="votre@email.com" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> S'abonner</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -365,6 +489,14 @@
         </div>
     </div>
 
+    <!-- ===== MODAL ARTICLE BLOG ===== -->
+    <div class="blog-modal-bg" id="articleModal">
+        <div class="blog-modal">
+            <button class="blog-modal-close" id="blogModalClose"><i class="fas fa-times"></i></button>
+            <div id="blogModalInner"></div>
+        </div>
+    </div>
+
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
@@ -375,5 +507,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
