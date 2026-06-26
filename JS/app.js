@@ -1971,7 +1971,7 @@ function openBlogModal(id) {
         return;
     }
     
-    console.log('✅ Article trouvé:', article.titre);
+    console.log('✅ Article trouvé:',  article.titre);
 
     const tagLabel = article.cat === 'qgis' ? 'QGIS' : article.cat === 'rstudio' ? 'RStudio' : 'Web SIG';
 

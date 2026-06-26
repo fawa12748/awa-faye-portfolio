@@ -1015,7 +1015,7 @@ body {
 /* ===== PROFILE HERO ===== */
 .profile-hero {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 400px 1fr;
     border: 1px solid var(--clr-border);
     border-radius: 24px;
     overflow: hidden;
@@ -1150,7 +1150,7 @@ body {
 }
 
 .bio-p {
-    font-size: 1.05rem;
+    font-size: 1.4rem;
     color: var(--clr-text-muted);
     line-height: 1.85;
     margin-bottom: 1.1rem;
@@ -1174,7 +1174,7 @@ body {
     gap: 6px;
     padding: 7px 16px;
     border-radius: 30px;
-    font-size: 0.82rem;
+    font-size: 0.9rem;
     font-weight: 500;
     background: var(--clr-bg-alt);
     color: var(--clr-text);
@@ -1195,9 +1195,9 @@ body {
 }
 
 .lang-chip-new {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 6px 16px;
-    border-radius: 30px;
+    border-radius: 10px;
     border: 1px solid var(--clr-border);
     color: var(--clr-text-muted);
     background: transparent;
@@ -1303,7 +1303,7 @@ body {
 
 .annee {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: var(--clr-accent);
     text-transform: uppercase;
     font-weight: 600;
@@ -1338,7 +1338,7 @@ body {
     margin-bottom: 0.75rem;
     padding-left: 1.3rem;
     position: relative;
-    font-size: 0.88rem;
+    font-size: 1rem;
     color: var(--clr-text-muted);
     line-height: 1.6;
 }
@@ -1640,6 +1640,17 @@ body {
 }
 
 /* ===== COMPÉTENCES EN CERCLES ===== */
+.skills-wrapper .skill-category:nth-child(2) {
+    margin-top: 6rem;
+}
+
+.skills-wrapper .skill-category:nth-child(3) {
+    margin-top: -1.5rem;
+}
+
+.skills-wrapper .skill-category:nth-child(4) {
+    margin-top: 5rem;
+}
 .skills-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -1679,7 +1690,7 @@ body {
 
 .category-description {
     color: var(--clr-text-muted);
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--clr-border);
